@@ -1,0 +1,26 @@
+{
+  "name": "datetime-utils",
+  "version": "1.0.0",
+  "description": "Datetime-utils is a js toolkit for manipulating Date objects",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilenceHVK/datetime-utils.git"
+  },
+  "keywords": [
+    "date",
+    "format"
+  ],
+  "author": "h-vk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SilenceHVK/datetime-utils/issues"
+  },
+  "homepage": "https://github.com/SilenceHVK/datetime-utils#readme"
+}
