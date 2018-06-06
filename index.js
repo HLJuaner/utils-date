@@ -37,19 +37,9 @@ function formate(datetime, fmt) {
   return convertDate(datetime).formate(fmt);
 };
 
-
-/**
- * Date Calculation
- * @param {String} type
- * @param {Number} num
- */
-function dateCalculation(type, num) {
-
-};
-
 /**
  * Exports method
  */
 exports = module.exports = {
-  calcType: dateCalculation.calcType,
+  convertDate
 };
