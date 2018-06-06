@@ -28,6 +28,8 @@ Datetime-utils is a js toolkit for manipulating Date objects.
 2. Date format
 
 ```javascript
+  import datetimeUtils from 'datetime-utils'
+
   console.log(datetimeUtils.formate(1528278558218, 'yyyy-MM-dd HH:mm:ss')); //=> 2018-06-06 17:49:18
   console.log(datetimeUtils.formate('Wed Jun 06 2018 17:55:31 GMT+0800', 'yyyy-MM-dd hh:mm:ss')); //=> 2018-06-07 01:55:31
   console.log(datetimeUtils.formate(new Date(), 'yyyy-MM-dd hh:mm:ss:ff')); //=> 2018-06-06 06:20:56:26
