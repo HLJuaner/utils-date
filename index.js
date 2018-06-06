@@ -41,5 +41,6 @@ function formate(datetime, fmt) {
  * Exports method
  */
 exports = module.exports = {
-  convertDate
+  convertDate,
+  formate
 };
