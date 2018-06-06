@@ -12,6 +12,9 @@ Datetime-utils is a js toolkit for manipulating Date objects.
 
 - [x] Conversion date
 - [x] Date format
+- [ ] Date calculation
+- [ ] Get last date by month
+- [ ] Get the number of days in the year 
 
 ## Usage
 
@@ -36,3 +39,5 @@ Datetime-utils is a js toolkit for manipulating Date objects.
   console.log(`This is the ${ new Date().formate('w') } week`); //=> This is the 3 week
   console.log(`This is the ${ new Date().formate('Q') } Quarterly`); //=> This is the 2 Quarterly
 ```
+
+3. Date calculation
