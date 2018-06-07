@@ -41,15 +41,15 @@ function formate(datetime, fmt) {
 /**
  * Date calculation method
  * @param {Date} datetime 
- * @param {String} calcType 
  * @param {Number} num 
+ * @param {String || calcType} type 
  */
-function calculation(datetime, calcType, num) {
+function calculation(datetime, num, type) {
   // Determine if it is a Date type
   if (!(datetime instanceof Date)) {
     datetime = convertDate(datetime);
   }
-  return dateCalculation.calculationDate(datetime, calcType, num);
+  return dateCalculation.calculationDate(datetime, num, type);
 };
 
 /**
