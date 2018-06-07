@@ -1,11 +1,13 @@
-## Datetime Utils
+## Utils-date
 
-Datetime-utils is a js toolkit for manipulating Date objects.
+Utils-date is a js toolkit for manipulating Date objects.
+
+
 
 ## Install
 
 ```bash
-  $ npm install datetime-utils
+  $ npm install utils-date --save
 ```
 
 ## Features
@@ -13,15 +15,14 @@ Datetime-utils is a js toolkit for manipulating Date objects.
 - [x] Conversion date
 - [x] Date format
 - [x] Date calculation
-- [ ] Get last date by month
-- [ ] Get the number of days in the year 
+- [x] Get last date by month
 
 ## Usage
 
 1. Conversion date
 
 ```javascript
-  var utilsDate = require("utils-date")
+  var utilsDate = require("utils-date");
 
   console.log(utilsDate.convertDate(1528278558218)); //=> 2018-06-06T09:49:18.218Z (Typeof Date)
   console.log(utilsDate.convertDate('2018-06-06T09:49:18.218Z')); //=> 2018-06-06T09:49:18.218Z (Typeof Date)
@@ -31,7 +32,7 @@ Datetime-utils is a js toolkit for manipulating Date objects.
 2. Date format
 
 ```javascript
-  var utilsDate = require("utils-date")
+  var utilsDate = require("utils-date");
 
   console.log(utilsDate.formate(1528278558218, 'yyyy-MM-dd HH:mm:ss')); //=> 2018-06-06 17:49:18
   console.log(utilsDate.formate('Wed Jun 06 2018 17:55:31 GMT+0800', 'yyyy-MM-dd hh:mm:ss')); //=> 2018-06-07 01:55:31
@@ -43,7 +44,7 @@ Datetime-utils is a js toolkit for manipulating Date objects.
 3. Date calculation
 
 ```javascript
-  var utilsDate = require("utils-date")
+  var utilsDate = require("utils-date");
 
   console.log(utilsDate.calculation(new Date(), 1, utilsDate.YEAR).formate('yyyy-MM-dd HH:mm:ss')); //=> 2019-06-07 14:20:10
   console.log(utilsDate.calculation(new Date(), 2, utilsDate.MONTH).formate('yyyy-MM-dd HH:mm:ss')); //=> 2018-08-07 14:20:10
@@ -60,4 +61,16 @@ Datetime-utils is a js toolkit for manipulating Date objects.
   console.log(new Date().addMinute(1).formate('yyyy-MM-dd HH:mm')); //=> 2018-06-07 14:21
   console.log(new Date().addSecond(1).formate('yyyy-MM-dd HH:mm:ss')); //=> 2018-06-07 14:20:11
   console.log(new Date().addMilisecond(1).formate('yyyy-MM-dd HH:mm:ss:ff')); //=> 2018-06-07 14:21:10:13
+```
+
+4. Get last date by month
+
+```javascript
+  var utilsDate = require("utils-date");
+
+  console.log(utilsDate.getLastDateByMonth(1528278558218)); //=> 30
+  console.log(utilsDate.getLastDateByMonth('Wed Jun 05 2018 17:55:31 GMT+0800')); //=> 30
+  console.log(utilsDate.getLastDateByMonth('2018-02-06T09:49:18.218Z')); //=> 28
+  console.log(utilsDate.getLastDateByMonth(new Date())); //=> 30
+  console.log(new Date().getLastDateByMonth()); //=> 30
 ```

@@ -30,3 +30,10 @@ console.log(new Date().addHour(1).formate('yyyy-MM-dd HH'));
 console.log(new Date().addMinute(1).formate('yyyy-MM-dd HH:mm'));
 console.log(new Date().addSecond(1).formate('yyyy-MM-dd HH:mm:ss'));
 console.log(new Date().addMilisecond(1).formate('yyyy-MM-dd HH:mm:ss:ff'));
+
+console.log('=========> Date getLastDateByMonth');
+console.log(utilsDate.getLastDateByMonth(1528278558218)); //=> 30
+console.log(utilsDate.getLastDateByMonth('Wed Jun 05 2018 17:55:31 GMT+0800')); //=> 30
+console.log(utilsDate.getLastDateByMonth('2018-02-06T09:49:18.218Z')); //=> 28
+console.log(utilsDate.getLastDateByMonth(new Date())); //=> 30
+console.log(new Date().getLastDateByMonth()); //=> 30

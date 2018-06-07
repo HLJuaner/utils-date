@@ -1,5 +1,5 @@
 "use strict";
-require('./lib/date-extend');
+var extendDate = require('./lib/date-extend');
 var dateCalculation = require('./lib/date-calculation');
 
 /**
@@ -53,11 +53,22 @@ function calculation(datetime, num, type) {
 };
 
 /**
+ * Date Get the last day of the month
+ * @param {Date} datetime 
+ * @return {Number}
+ */
+function getLastDateByMonth(datetime) {
+  // Determine if it is a Date type
+  if (!(datetime instanceof Date)) {
+    datetime = convertDate(datetime);
+  }
+  return dateCalculation.getLastDateByMonth(datetime);
+};
+
+/**
  * Exports method
  */
 exports = module.exports = {
-  convertDate,
-  formate,
   YEAR: dateCalculation.calcType.YEAR,
   MONTH: dateCalculation.calcType.MONTH,
   DATE: dateCalculation.calcType.DATE,
@@ -65,5 +76,8 @@ exports = module.exports = {
   MINUTE: dateCalculation.calcType.MINUTE,
   SECOND: dateCalculation.calcType.SECOND,
   MILISECOND: dateCalculation.calcType.MILISECOND,
-  calculation: calculation,
+  convertDate,
+  formate,
+  calculation,
+  getLastDateByMonth
 };
