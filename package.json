@@ -14,8 +14,11 @@
     "url": "git+https://github.com/SilenceHVK/datetime-utils.git"
   },
   "keywords": [
+    "utils-date",
     "date",
-    "format",
+    "date-format",
+    "date-convert",
+    "date-calculation",
     "toolbox"
   ],
   "author": "h-vk",
