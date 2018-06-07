@@ -37,10 +37,33 @@ function formate(datetime, fmt) {
   return convertDate(datetime).formate(fmt);
 };
 
+
+/**
+ * Date calculation method
+ * @param {Date} datetime 
+ * @param {String} calcType 
+ * @param {Number} num 
+ */
+function calculation(datetime, calcType, num) {
+  // Determine if it is a Date type
+  if (!(datetime instanceof Date)) {
+    datetime = convertDate(datetime);
+  }
+  return dateCalculation.calculationDate(datetime, calcType, num);
+};
+
 /**
  * Exports method
  */
 exports = module.exports = {
   convertDate,
-  formate
+  formate,
+  YEAR: dateCalculation.calcType.YEAR,
+  MONTH: dateCalculation.calcType.MONTH,
+  DATE: dateCalculation.calcType.DATE,
+  HOUR: dateCalculation.calcType.HOUR,
+  MINUTE: dateCalculation.calcType.MINUTE,
+  SECOND: dateCalculation.calcType.SECOND,
+  MILISECOND: dateCalculation.calcType.MILISECOND,
+  calculation: calculation,
 };

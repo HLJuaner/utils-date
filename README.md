@@ -12,7 +12,7 @@ Datetime-utils is a js toolkit for manipulating Date objects.
 
 - [x] Conversion date
 - [x] Date format
-- [ ] Date calculation
+- [x] Date calculation
 - [ ] Get last date by month
 - [ ] Get the number of days in the year 
 
