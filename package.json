@@ -1,33 +1,33 @@
 {
-  "name": "utils-date",
-  "version": "1.2",
-  "description": "Utils-date is a js toolkit for manipulating Date objects",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "node ./test/test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SilenceHVK/datetime-utils.git"
-  },
-  "keywords": [
-    "utils-date",
-    "date",
-    "date-format",
-    "date-convert",
-    "date-calculation",
-    "toolbox"
-  ],
-  "author": "h-vk",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/SilenceHVK/datetime-utils/issues"
-  },
-  "homepage": "https://github.com/SilenceHVK/datetime-utils#readme",
-  "dependencies": {
-    "rollup": "^0.62.0"
-  }
+	"name": "utils-date",
+	"version": "1.2",
+	"description": "Utils-date is a js toolkit for manipulating Date objects",
+	"main": "utils-date.js",
+	"directories": {
+		"lib": "lib"
+	},
+	"scripts": {
+		"test": "node ./test/test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SilenceHVK/datetime-utils.git"
+	},
+	"keywords": [
+		"utils-date",
+		"date",
+		"date-format",
+		"date-convert",
+		"date-calculation",
+		"toolbox"
+	],
+	"author": "h-vk",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/SilenceHVK/datetime-utils/issues"
+	},
+	"homepage": "https://github.com/SilenceHVK/datetime-utils#readme",
+	"dependencies": {
+		"rollup": "^0.62.0"
+	}
 }
