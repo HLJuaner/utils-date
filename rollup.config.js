@@ -6,7 +6,6 @@ const babel = require('rollup-plugin-babel');
 const cjs = require('rollup-plugin-commonjs');
 const uglify = require('rollup-plugin-uglify').uglify;
 
-// console.log(uglify());
 // 打包后生成 js 的顶部注释说明
 const banner =
 	`/*!\n` +
