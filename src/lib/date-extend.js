@@ -6,8 +6,7 @@
  * @return Date
  */
 Date.prototype.parse = function (datetime) {
-	console.log(datetime);
-}
+};
 
 /**
  * 时间格式化
@@ -15,7 +14,67 @@ Date.prototype.parse = function (datetime) {
  * @return String
  */
 Date.prototype.formate = function (fmt) {
-	console.log(fmt);
-}
 
+};
+
+/**
+ * 日期计算
+ * @param {*} num
+ * @param {*} type
+ */
+Date.prototype.calc = function (num, type) {
+
+};
+
+/**
+ * 日期年计算
+ * @param {*} num
+ */
+Date.prototype.addYear = function (num) {
+
+};
+
+/**
+ * 日期月计算
+ * @param {*} num
+ */
+Date.prototype.addMonth = function (num) {
+
+};
+
+/**
+ * 日期日计算
+ * @param {*} num
+ */
+Date.prototype.addDate = function (num) {
+
+};
+
+/**
+ * 日期小时计算
+ * @param {*} num
+ */
+Date.prototype.addHour = function (num) {
+};
+
+/**
+ * 日期分钟计算
+ * @param {*} num
+ */
+Date.prototype.addMinute = function (num) {
+};
+
+/**
+ * 日期秒计算
+ * @param {*} num
+ */
+Date.prototype.addSecond = function (num) {
+};
+
+/**
+ * 日期毫秒计算
+ * @param {*} num
+ */
+Date.prototype.addMilisecond = function (num) {
+};
 export default Date;
