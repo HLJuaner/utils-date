@@ -9,12 +9,12 @@ Date.prototype.parse = function (datetime) {
 };
 
 /**
- * 时间格式化
+ * Extended Date format method
  * @param {String} fmt
  * @return String
  */
 Date.prototype.formate = function (fmt) {
-
+	const o = {}
 };
 
 /**
@@ -23,7 +23,6 @@ Date.prototype.formate = function (fmt) {
  * @param {*} type
  */
 Date.prototype.calc = function (num, type) {
-
 };
 
 /**
@@ -31,7 +30,6 @@ Date.prototype.calc = function (num, type) {
  * @param {*} num
  */
 Date.prototype.addYear = function (num) {
-
 };
 
 /**
