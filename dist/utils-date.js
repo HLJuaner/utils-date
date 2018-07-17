@@ -8,7 +8,18 @@
 	(global.utilsDate = factory());
 }(this, (function () { 'use strict';
 
-	var utilsDate = {};
+	Date.prototype.format = function () {};
+
+	/**
+	 * 时间日期转换
+	 * @param {any} datetime
+	 * @return {Date} Date
+	 */
+	function convertDate(datetime) {}
+
+	var utilsDate = {
+	  convertDate: convertDate
+	};
 
 	return utilsDate;
 
