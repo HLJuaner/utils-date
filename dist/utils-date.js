@@ -8,7 +8,24 @@
 	(global.utilsDate = factory());
 }(this, (function () { 'use strict';
 
-	Date.prototype.format = function () {};
+	/**
+	 * 日期转换
+	 * @param {String} datetime
+	 * @return Date
+	 */
+
+	Date.prototype.parse = function (datetime) {
+	  console.log(datetime);
+	};
+
+	/**
+	 * 时间格式化
+	 * @param {String} fmt
+	 * @return String
+	 */
+	Date.prototype.formate = function (fmt) {
+	  console.log(fmt);
+	};
 
 	/**
 	 * 时间日期转换
