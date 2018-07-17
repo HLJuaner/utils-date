@@ -8,8 +8,8 @@
 	},
 	"scripts": {
 		"test": "node ./test/test.js",
-		"dev": "rollup -w -c ./rollup.config.js --environment TARGET:utils-date-dev",
-		"build": "rollup -w -c ./rollup.config.js --environment TARGET:utils-date-prod"
+		"dev": "rollup -w -c ./rollup.config.js --environment TARGET:dev",
+		"build": "rollup -w -c ./rollup.config.js --environment TARGET:prod"
 	},
 	"repository": {
 		"type": "git",
