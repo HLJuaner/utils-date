@@ -9,19 +9,34 @@
 }(this, (function () { 'use strict';
 
 	/**
-	 * 日期转换
-	 * @param {String} datetime
-	 * @return Date
-	 */
-
-	Date.prototype.parse = function (datetime) {};
-
-	/**
 	 * Extended Date format method
 	 * @param {String} fmt
 	 * @return String
 	 */
-	Date.prototype.formate = function (fmt) {
+
+	Date.prototype.format = function (fmt) {
+	  // Define format time parameters
+	  var obj = {
+	    yyyy: this.getFullYear(),
+	    yy: ('' + this.getFullYear()).slice(-2),
+	    M: this.getMonth() + 1,
+	    MM: ('0' + (this.getMonth() + 1)).slice(-2),
+	    d: this.getDate(),
+	    dd: ('0' + this.getDate()).slice(-2),
+	    H: this.getHours(),
+	    HH: ('0' + this.getHours()).slice(-2),
+	    h: this.getHours() % 12,
+	    hh: ('0' + this.getHours() % 12).slice(-2),
+	    m: this.getMinutes(),
+	    mm: ('0' + this.getMinutes()).slice(-2),
+	    s: this.getSeconds(),
+	    ss: ('0' + this.getSeconds()).slice(-2),
+	    ff: this.getMilliseconds(),
+	    w: ['日', '一', '二', '三', '四', '五', '六'][this.getDay()]
+	  };
+	  return fmt.replace(/([a-z]+)/ig, function ($1) {
+	    return obj[$1] || $1;
+	  });
 	};
 
 	/**
@@ -78,10 +93,10 @@
 	 * @param {any} datetime
 	 * @return {Date} Date
 	 */
-	function convertDate(datetime) {}
+	function parse(datetime) {}
 
 	var utilsDate = {
-	  convertDate: convertDate
+	  parse: parse
 	};
 
 	return utilsDate;
