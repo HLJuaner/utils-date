@@ -7,10 +7,10 @@ import DateExtend from './lib/date-extend';
  * @param {any} datetime
  * @return {Date} Date
  */
-function convertDate(datetime) {
+function parse(datetime) {
 
 }
 
 export default {
-	convertDate
+	parse
 }

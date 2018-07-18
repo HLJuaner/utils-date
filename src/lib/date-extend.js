@@ -1,13 +1,4 @@
 'use strict';
-
-/**
- * 日期转换
- * @param {String} datetime
- * @return Date
- */
-Date.prototype.parse = function (datetime) {
-};
-
 /**
  * Extended Date format method
  * @param {String} fmt
