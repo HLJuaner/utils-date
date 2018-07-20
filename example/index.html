@@ -15,7 +15,11 @@
 		console.log(new Date().format("yyyy-MM-dd HH:mm:ss w"));
 		console.log(utilsDate.parse(new Date().getTime()));
 		console.log(utilsDate.format(new Date().getTime(), "yyyy-MM-dd HH:mm:ss w"));
-		console.log(utilsDate.YEAR);
+		console.log(new Date().addDate(1));
+		console.log(new Date().addYear(2));
+		console.log(new Date().calc(-1, "year"));
+		console.log(utilsDate.calc(new Date(), 1, "Hour"));
+		console.log(utilsDate.calc(new Date(), 1, utilsDate.MONTH));
 	</script>
 </body>
 

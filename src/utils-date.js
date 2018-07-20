@@ -1,6 +1,6 @@
 'use strict';
 
-import { DateType } from './lib/date-extend';
+import { DateType, calculationDate } from './lib/date-extend';
 
 /**
  * Conversion date
@@ -38,12 +38,16 @@ function format(datetime, fmt) {
 /**
  *
  * @param {String|Number} datetime
- * @param {String|Number} num
- * @param {String} type
+ * @param {Number} num
+ * @param {DateType} type
  * @return {Date}
  */
 function calc(datetime, num, type) {
-
+	// Determine if it is a Date type
+	if (!(datetime instanceof Date)) {
+		datetime = parse(datetime);
+	}
+	return calculationDate(datetime, num, type);
 };
 
 export default {
