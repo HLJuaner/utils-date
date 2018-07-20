@@ -35,7 +35,6 @@ function formate(datetime, fmt) {
 	return convertDate(datetime).formate(fmt);
 };
 
-
 export default {
 	parse,
 	formate
