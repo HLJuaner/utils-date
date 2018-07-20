@@ -1,5 +1,14 @@
 'use strict';
 
+const DateType = {
+	Year: 'Year',
+	Month: 'Month',
+	Date: 'Date',
+	Hour: 'Hour',
+	Minute: 'Minute',
+	Second: 'Second',
+	Milisecond: 'Milisecond'
+};
 
 /**
  * Extended Date format method
@@ -23,7 +32,6 @@ Date.prototype.format = function (fmt) {
 		mm: ('0' + this.getMinutes()).slice(-2),
 		s: this.getSeconds(),
 		ss: ('0' + this.getSeconds()).slice(-2),
-		ff: this.getMilliseconds(),
 		w: ['日', '一', '二', '三', '四', '五', '六'][this.getDay()]
 	}
 	return fmt.replace(/([a-z]+)/ig, $1 => obj[$1] || $1);
@@ -31,8 +39,8 @@ Date.prototype.format = function (fmt) {
 
 /**
  * 日期计算
- * @param {*} num
- * @param {*} type
+ * @param {String|Number} num
+ * @param {String} type
  */
 Date.prototype.calc = function (num, type) {
 };
@@ -87,4 +95,8 @@ Date.prototype.addSecond = function (num) {
  */
 Date.prototype.addMilisecond = function (num) {
 };
-export default Date;
+
+module.exports = {
+	Date,
+	DateType
+};

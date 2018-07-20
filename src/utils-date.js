@@ -1,6 +1,6 @@
 'use strict';
 
-import DateExtend from './lib/date-extend';
+import { DateType } from './lib/date-extend';
 
 /**
  * Conversion date
@@ -35,7 +35,26 @@ function format(datetime, fmt) {
 	return parse(datetime).format(fmt);
 };
 
+/**
+ *
+ * @param {String|Number} datetime
+ * @param {String|Number} num
+ * @param {String} type
+ * @return {Date}
+ */
+function calc(datetime, num, type) {
+
+};
+
 export default {
 	parse,
-	format
+	format,
+	calc,
+	YEAR: DateType.Year,
+	MONTH: DateType.Month,
+	DATE: DateType.Date,
+	HOUR: DateType.Hour,
+	MINUTE: DateType.Minute,
+	SECOND: DateType.Second,
+	MILISECOND: DateType.Milisecond
 }

@@ -8,12 +8,21 @@
 	(global.utilsDate = factory());
 }(this, (function () { 'use strict';
 
+	var DateType = {
+	  Year: 'Year',
+	  Month: 'Month',
+	  Date: 'Date',
+	  Hour: 'Hour',
+	  Minute: 'Minute',
+	  Second: 'Second',
+	  Milisecond: 'Milisecond'
+	};
+
 	/**
 	 * Extended Date format method
 	 * @param {String} fmt
 	 * @return String
 	 */
-
 	Date.prototype.format = function (fmt) {
 	  // Define format time parameters
 	  var obj = {
@@ -31,7 +40,6 @@
 	    mm: ('0' + this.getMinutes()).slice(-2),
 	    s: this.getSeconds(),
 	    ss: ('0' + this.getSeconds()).slice(-2),
-	    ff: this.getMilliseconds(),
 	    w: ['日', '一', '二', '三', '四', '五', '六'][this.getDay()]
 	  };
 	  return fmt.replace(/([a-z]+)/ig, function ($1) {
@@ -41,8 +49,8 @@
 
 	/**
 	 * 日期计算
-	 * @param {*} num
-	 * @param {*} type
+	 * @param {String|Number} num
+	 * @param {String} type
 	 */
 	Date.prototype.calc = function (num, type) {};
 
@@ -88,6 +96,12 @@
 	 */
 	Date.prototype.addMilisecond = function (num) {};
 
+	var dateExtend = {
+	  Date: Date,
+	  DateType: DateType
+	};
+	var dateExtend_1 = dateExtend.DateType;
+
 	/**
 	 * Conversion date
 	 * @param {String|Numer} datetime
@@ -119,9 +133,25 @@
 		}
 		return parse(datetime).format(fmt);
 	}
+	/**
+	 *
+	 * @param {String|Number} datetime
+	 * @param {String|Number} num
+	 * @param {String} type
+	 * @return {Date}
+	 */
+	function calc(datetime, num, type) {}
 	var utilsDate = {
 		parse: parse,
-		format: format
+		format: format,
+		calc: calc,
+		YEAR: dateExtend_1.Year,
+		MONTH: dateExtend_1.Month,
+		DATE: dateExtend_1.Date,
+		HOUR: dateExtend_1.Hour,
+		MINUTE: dateExtend_1.Minute,
+		SECOND: dateExtend_1.Second,
+		MILISECOND: dateExtend_1.Milisecond
 	};
 
 	return utilsDate;
