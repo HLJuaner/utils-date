@@ -112,16 +112,16 @@
 	 * @param {String} fmt
 	 * @return {String}
 	 */
-	function formate(datetime, fmt) {
+	function format(datetime, fmt) {
 		// Determine if it is a Date type
 		if (datetime instanceof Date) {
-			return datetime.formate(fmt);
+			return datetime.format(fmt);
 		}
-		return convertDate(datetime).formate(fmt);
+		return parse(datetime).format(fmt);
 	}
 	var utilsDate = {
 		parse: parse,
-		formate: formate
+		format: format
 	};
 
 	return utilsDate;
