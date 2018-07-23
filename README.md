@@ -31,6 +31,33 @@ yarn
 
 ## How to use
 
+Used in ES6 or ES6+
+```javascript
+	import utilsDate form 'utils-date';
+```
+
+Used in Web
+```javascript
+	<script src="https://unpkg.com/utils-date@1.2.0/dist/utils-date.min.js"></script>
+```
+
+
+
+- Conversion date
+
+
+```javascript
+	// Timestamp conversion
+	console.log(utilsDate.parse(1528278558218)); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
+
+	// Sql date conversion
+	console.log(utilsDate.parse(1528278558218)); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
+
+	// UTC time conversion
+
+	// String date conversion
+```
+
 ## MIT
 
 ```

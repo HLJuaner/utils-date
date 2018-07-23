@@ -9,12 +9,12 @@ import { DateType, calculationDate } from './lib/date-extend';
  */
 function parse(datetime) {
 	try {
-		if (typeof datetime !== "number") {
-			// Clear the space before and after the string
-			datetime = datetime.replace(/^(\s|\u00A0)+/, '').replace(/(\s|\u00A0)+$/, '');
-			// Format the date format
-			datetime = datetime.replace("/Date(", "").replace(")/", "").split("+")[0];
-		}
+		datetime = datetime.toString();
+		// Clear the space before and after the string
+		datetime = datetime.replace(/^(\s|\u00A0)+/, '').replace(/(\s|\u00A0)+$/, '');
+		// Format the date format
+		datetime = datetime.replace("/Date(", "").replace(")/", "").split("+")[0];
+		datetime = isNaN(parseInt(datetime)) ? datetime : parseInt(datetime);
 		return new Date(datetime);
 	} catch (err) {
 		throw new Error('the date entered is in the wrong format');
