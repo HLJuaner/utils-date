@@ -9,7 +9,7 @@
 
 Utils Date is a toolkit for extending JavaScript Date objects and is designed to be lightweight, simple, and easy to use.
 
-You can see more details by visiting the [Utils Date]() website.
+You can see more details by visiting the [Utils Date](https://htmlpreview.github.io/?https://github.com/SilenceHVK/utils-date/blob/master/example/index.html) website.
 
 ## Install
 
