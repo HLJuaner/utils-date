@@ -45,28 +45,70 @@ Used in Web
 
 - Conversion date
 
-
 ```javascript
 	// Timestamp conversion
-	console.log(utilsDate.parse(1528278558218)); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
+	utilsDate.parse(1528278558218); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
 
 	// Sql date conversion
-	console.log(utilsDate.parse(/Date(1528278558218)/)); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
+	utilsDate.parse(/Date(1528278558218)/); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
 
 	// UTC time conversion
-	console.log(utilsDate.parse("Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)")); // Thu Jun 07 2018 01:49:18 GMT+0800 (中国标准时间)
+	utilsDate.parse("Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)"); // Thu Jun 07 2018 01:49:18 GMT+0800 (中国标准时间)
 
 	// String date conversion
-	console.log(utilsDate.parse("2018")); // Mon Jan 01 2018 08:00:00 GMT+0800 (中国标准时间)
-	console.log(utilsDate.parse("2018-6")); // Fri Jun 01 2018 00:00:00 GMT+0800 (中国标准时间)
-	console.log(utilsDate.parse("2018-6-7")); // Thu Jun 07 2018 00:00:00 GMT+0800 (中国标准时间)
-	console.log(utilsDate.parse("2018-6-7 9")); // Fri Jun 01 2018 07:09:00 GMT+0800 (中国标准时间)
-	console.log(utilsDate.parse("2018-6-7 9:00")); // Fri Jun 01 2018 07:09:00 GMT+0800 (中国标准时间)
-	console.log(utilsDate.parse("2018-6-7 9:00:00")); // Fri Jun 01 2018 07:09:00 GMT+0800 (中国标准时间)
+	utilsDate.parse("2018"); // Mon Jan 01 2018 08:00:00 GMT+0800 (中国标准时间)
 
-	console.log(utilsDate.parse("1528278558218")); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
+	utilsDate.parse("2018-6"); // Fri Jun 01 2018 00:00:00 GMT+0800 (中国标准时间)
 
-	console.log(utilsDate.parse("/Date(1528278558218)/")); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
+	utilsDate.parse("2018-6-7"); // Thu Jun 07 2018 00:00:00 GMT+0800 (中国标准时间)
+
+	utilsDate.parse("2018-6-7 9"); // Fri Jun 01 2018 07:09:00 GMT+0800 (中国标准时间)
+
+	utilsDate.parse("2018-6-7 9:00"); // Fri Jun 01 2018 07:09:00 GMT+0800 (中国标准时间)
+
+	utilsDate.parse("2018-6-7 9:00:00"); // Fri Jun 01 2018 07:09:00 GMT+0800 (中国标准时间)
+
+	utilsDate.parse("1528278558218"); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
+
+	utilsDate.parse("/Date(1528278558218)/"); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
+```
+
+- Date format
+
+```javascript
+	// Used Date extend format 24 hours
+	new Date().format("yyyy-MM-dd HH:mm:ss"); // 2018-07-23 16:17:21
+
+	new Date().format("yy-M-d H:m:s"); // 18-7-23 16:17:21
+
+	new Date().format("yy 年 M 月 d 日 H 时 m 分 s 秒"); // 18 年 7 月 23 日 16 时 17 分 21 秒
+
+	new Date().format("yyyy-MM-dd"); // 2018-07-23
+
+	new Date().format("yy"); // 18
+
+	new Date().format("MM"); // 07
+
+	new Date().format("M"); // 7
+
+	// Used Date extend format 12 hours
+	new Date().format("yyyy-MM-dd hh:mm:ss"); // 2018-07-23 04:20:43
+
+	// Used utils-date
+	utilsDate.format(new Date(),"yyyy-MM-dd HH:mm:ss"); // 2018-07-23 16:22:42
+
+	utilsDate.format(1528278558218,"yyyy-MM-dd HH:mm:ss"); // 2018-06-06 17:49:18
+
+	utilsDate.format(/Date(1528278558218)/,"yyyy-MM-dd HH:mm:ss"); // 2018-06-06 17:49:18
+
+	utilsDate.format("Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)","yyyy-MM-dd HH:mm:ss"); // 2018-06-07 01:49:18
+
+	utilsDate.format("2018","yyyy-MM-dd 00:00:00"); // 2018-01-01 00:00:00
+```
+
+- Date calculation
+```javascript
+
 ```
 
 ## MIT
