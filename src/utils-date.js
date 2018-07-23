@@ -44,7 +44,7 @@ function format(datetime, fmt) {
  * @param {DateType} type
  * @return {Date}
  */
-function calc(datetime, num, type) {
+function add(datetime, num, type) {
 	// Determine if it is a Date type
 	if (!(datetime instanceof Date)) {
 		datetime = parse(datetime);
@@ -55,7 +55,7 @@ function calc(datetime, num, type) {
 export default {
 	parse,
 	format,
-	calc,
+	add,
 	YEAR: DateType.Year,
 	MONTH: DateType.Month,
 	DATE: DateType.Date,
