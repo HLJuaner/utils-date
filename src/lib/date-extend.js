@@ -92,7 +92,7 @@ Date.prototype.format = function (fmt) {
  * @param {String} type
  * @return Date
  */
-Date.prototype.calc = function (num, type) {
+Date.prototype.add = function (num, type) {
 	return calculationDate(this, num, type);
 };
 
