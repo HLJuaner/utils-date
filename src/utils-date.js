@@ -36,7 +36,7 @@ function format(datetime, fmt) {
 };
 
 /**
- *
+ * Date calculation method
  * @param {String|Number} datetime
  * @param {Number} num
  * @param {DateType} type
