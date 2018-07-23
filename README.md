@@ -51,11 +51,13 @@ Used in Web
 	console.log(utilsDate.parse(1528278558218)); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
 
 	// Sql date conversion
-	console.log(utilsDate.parse(1528278558218)); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
+	console.log(utilsDate.parse(/Date(1528278558218)/)); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
 
 	// UTC time conversion
+	console.log(utilsDate.parse("Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)")); // Thu Jun 07 2018 01:49:18 GMT+0800 (中国标准时间)
 
 	// String date conversion
+	console.log(utilsDate.parse("Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)"));
 ```
 
 ## MIT
