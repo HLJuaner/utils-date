@@ -77,6 +77,9 @@ Used in Web
 
 ```javascript
 	// Used Date extend format 24 hours
+
+	new Date().format("yyyy-MM-dd HH:mm:ss 星期 w"); // 2018-07-23 16:40:21 星期 一
+
 	new Date().format("yyyy-MM-dd HH:mm:ss"); // 2018-07-23 16:17:21
 
 	new Date().format("yy-M-d H:m:s"); // 18-7-23 16:17:21
