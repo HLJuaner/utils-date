@@ -110,9 +110,50 @@ Used in Web
 
 - Date calculation
 ```javascript
-	// Used Date extend format 24 hours
-	new Date().add()
+	// Used Date extend add
+	new Date().add(1,"year"); // Tue Jul 23 2019 21:59:33 GMT+0800 (中国标准时间)
+
+	new Date().add(1,"month"); // Thu Aug 23 2018 22:00:19 GMT+0800 (中国标准时间)
+
+	new Date().add(-1,"date"); // Sun Jul 22 2018 22:00:53 GMT+0800 (中国标准时间)
+
+	new Date().add(-1,"hour"); // Mon Jul 23 2018 21:01:29 GMT+0800 (中国标准时间)
+
+	new Date().add(-1,"minute"); // Mon Jul 23 2018 22:01:05 GMT+0800 (中国标准时间)
+
+	new Date().add(-1,"second"); // Mon Jul 23 2018 22:02:33 GMT+0800 (中国标准时间)
+
+	new Date().add(-1,"milisecond"); // Mon Jul 23 2018 22:01:33 GMT+0800 (中国标准时间)
+
+	// Used Date extend method
+	new Date().addYear(1); // Tue Jul 23 2019 22:03:24 GMT+0800 (中国标准时间)
+
+	new Date().addMonth(1); // Thu Aug 23 2018 22:03:48 GMT+0800 (中国标准时间)
+
+	new Date().addDate(-1); // Sun Jul 22 2018 22:04:20 GMT+0800 (中国标准时间)
+
+	new Date().addHour(-1); // Mon Jul 23 2018 21:04:48 GMT+0800 (中国标准时间)
+
+	new Date().addMinute(1); // Mon Jul 23 2018 22:06:37 GMT+0800 (中国标准时间)
+
+	new Date().addSecond(1); // Mon Jul 23 2018 22:02:33 GMT+0800 (中国标准时间)
+
+	new Date().addMilisecond(-1); // Mon Jul 23 2018 22:01:33 GMT+0800 (中国标准时间) 
+
+	// Used utils-date
+	utilsDate.add(1528278558218,1,"year"); // Tue Jul 23 2019 22:03:24 GMT+0800 (中国标准时间)
+
+	utilsDate.add("1528278558218",1,utilsDate.YEAR); // Tue Jul 23 2019 22:03:24 GMT+0800 (中国标准时间)
+
+	utilsDate.add(/Date(1528278558218)/, -1 , utilsDate.MONTH); // Sun May 06 2018 17:49:18 GMT+0800 (中国标准时间)
+
+	utilsDate.add("Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)", 1 , utilsDate.DATE); // Fri Jun 08 2018 01:49:18 GMT+0800 (中国标准时间)
+
+	utilsDate.add("2018", 1 , utilsDate.HOUR); // Mon Jan 01 2018 09:00:00 GMT+0800 (中国标准时间)
+
+	utilsDate.add("2018-2-1", 1 , utilsDate.MINUTE); // Mon Jan 01 2018 00:01:00 GMT+0800 (中国标准时间)
 ```
+
 
 ## MIT
 
