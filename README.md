@@ -57,7 +57,16 @@ Used in Web
 	console.log(utilsDate.parse("Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)")); // Thu Jun 07 2018 01:49:18 GMT+0800 (中国标准时间)
 
 	// String date conversion
-	console.log(utilsDate.parse("Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)"));
+	console.log(utilsDate.parse("2018")); // Mon Jan 01 2018 08:00:00 GMT+0800 (中国标准时间)
+	console.log(utilsDate.parse("2018-6")); // Fri Jun 01 2018 00:00:00 GMT+0800 (中国标准时间)
+	console.log(utilsDate.parse("2018-6-7")); // Thu Jun 07 2018 00:00:00 GMT+0800 (中国标准时间)
+	console.log(utilsDate.parse("2018-6-7 9")); // Fri Jun 01 2018 07:09:00 GMT+0800 (中国标准时间)
+	console.log(utilsDate.parse("2018-6-7 9:00")); // Fri Jun 01 2018 07:09:00 GMT+0800 (中国标准时间)
+	console.log(utilsDate.parse("2018-6-7 9:00:00")); // Fri Jun 01 2018 07:09:00 GMT+0800 (中国标准时间)
+
+	console.log(utilsDate.parse("1528278558218")); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
+
+	console.log(utilsDate.parse("/Date(1528278558218)/")); // Wed Jun 06 2018 17:49:18 GMT+0800 (中国标准时间)
 ```
 
 ## MIT

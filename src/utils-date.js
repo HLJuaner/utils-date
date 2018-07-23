@@ -14,7 +14,9 @@ function parse(datetime) {
 		datetime = datetime.replace(/^(\s|\u00A0)+/, '').replace(/(\s|\u00A0)+$/, '');
 		// Format the date format
 		datetime = datetime.replace("/Date(", "").replace(")/", "").replace(/-/g, "/").replace(' ', ':').split("+")[0];
-		datetime = datetime.length >= 13 && !isNaN(parseInt(datetime)) ? parseInt(datetime) : datetime;
+		if (datetime.length >= 13 && !isNaN(datetime)) {
+			datetime = parseInt(datetime);
+		}
 		return new Date(datetime);
 	} catch (err) {
 		throw new Error('the date entered is in the wrong format');
