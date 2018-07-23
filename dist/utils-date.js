@@ -212,7 +212,7 @@
 	 * @param {DateType} type
 	 * @return {Date}
 	 */
-	function calc(datetime, num, type) {
+	function add(datetime, num, type) {
 		// Determine if it is a Date type
 		if (!(datetime instanceof Date)) {
 			datetime = parse(datetime);
@@ -222,7 +222,7 @@
 	var utilsDate = {
 		parse: parse,
 		format: format,
-		calc: calc,
+		add: add,
 		YEAR: dateExtend_1.Year,
 		MONTH: dateExtend_1.Month,
 		DATE: dateExtend_1.Date,
